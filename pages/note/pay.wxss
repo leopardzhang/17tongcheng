@@ -1,0 +1,32 @@
+/* pages/note/pay.wxss */
+@import "../release/releaselist.wxss";
+.nav_items{
+    width: 236rpx;
+    line-height: 1.7;
+    border-radius: 3px;
+    border: 1px solid #d6d6d8;
+    text-align: center;
+    background: #fff;
+    font-size: 14px;
+    float: left;
+    margin: 20rpx 10rpx;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 16rpx 0;
+}
+.content .nav_items:nth-child(3n){
+    margin-right: 0;
+}
+.nav_items.active{
+    border: 1px solid #1AAD19;
+    color: #1AAD19;
+}
+.flex{
+    justify-content: space-around;
+}
+button{
+    font-size: 16px;
+}
+.nav_items {
+    color: #666;
+}

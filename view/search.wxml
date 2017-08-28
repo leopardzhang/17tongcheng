@@ -1,0 +1,8 @@
+<template name="search">
+    <view class="search-bar">
+        <view class="content flex">
+            <view class="input" bindtap="viewSearch">输入关键字</view>
+            <navigator class="fb_btn" url="/pages/release/releaselist"></navigator>
+        </view>
+    </view>
+</template>

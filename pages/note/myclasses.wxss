@@ -1,0 +1,48 @@
+/* pages/note/myclasses.wxss */
+@import "../classes/classlist.wxss";
+.yutitle{
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.border_box_tb::before{
+  content: '';
+  width: 8px;
+  height: 20px;
+  display: inline-block;
+  float: left;
+  background: #1d82d2;
+  margin: auto 20rpx;
+}
+.border_box_tb::before{
+  content: '';
+  width: 8px;
+  height: 20px;
+  display: inline-block;
+  float: left;
+  background: #1d82d2;
+  margin: auto 20rpx;
+}
+.yutitle {
+  border-top:1px solid #ccc;
+border-bottom:1px solid #ccc;
+
+}
+.yutitle {
+border-top:1px solid #ccc;
+border-bottom:1px solid #ccc;
+
+}
+.c1d82d2 {
+color:#1d82d2;
+
+}
+.border_box_tb {
+font-size:18px;
+line-height:2.4;
+display:flex;
+
+}
+.delete{
+  color: #ff0000;
+  font-size: 12px;
+}

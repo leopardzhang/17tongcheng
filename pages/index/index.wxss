@@ -1,0 +1,92 @@
+/* pages/index/index.wxss */
+@import "/css/search.wxss";
+.pt_10{
+    padding-top: 10rpx;
+}
+.border_box{
+    border-bottom: 20rpx solid #e6e6e6;
+}
+.nav_box{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    justify-content: space-around;
+}
+.nav_item{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 5px 0;
+}
+.nav_item text{
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-top:-18rpx;
+}
+.nav_item image{
+    width: 102rpx;
+    height: 102rpx;
+    border-radius: 12rpx;
+}
+.title_box{
+    width: 162rpx;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.class_img{
+    width: 62rpx;
+    height: 47rpx;
+    margin-bottom: 10rpx;
+}
+.title_box text{
+    color: #333;
+    font-size: 28rpx;
+}
+.class_item_box{
+    align-items:center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 562rpx;
+}
+.class_item_box{
+    display: flex;
+    justify-content: flex-start;
+    min-height:72px;
+}
+.class_item_box view{
+    width: 33.333%;
+    text-align: center;
+    font-size: 30rpx;
+    color: #666;
+    padding: 16rpx 0;
+}
+.more navigator{
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    color: #ec0000;
+    font-size: 28rpx;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    line-height: 33rpx;
+}
+.more image{
+    width: 33rpx;
+    height: 33rpx;
+    margin-right: 5px;
+    display: block;
+}
+.more text{
+    display: block;
+    width: 4.4em;
+}
+.padding-bottom{
+    padding-bottom: 30rpx;
+}

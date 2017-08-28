@@ -1,0 +1,18 @@
+<!--pages/forum/forum.wxml-->
+<!-- banner -->
+<import src="/view/banner.wxml" />
+<!-- search -->
+<import src="/view/search.wxml" />
+<template is="search" data="{{logoSrc: logoSrc}}" />
+<scroll-view class="main pt">
+    <view class="content body">
+        <template is="banner" data="{{bannerUrlList: bannerUrlList,swiper: swiper}}"/>
+    </view>
+    <view class="pt_20">
+        <view class="board content">
+            <view class="f28 c000 l2">标题：挖掘机技术那加强</view>
+            <view class="f24 c585858 em l2">中国山东找蓝翔中国山东找蓝翔中国山东找蓝翔中国山东找蓝翔中国山东找蓝翔中国山东找蓝翔中国山东找蓝翔中国山东找蓝翔中国山东找蓝翔中国山东找蓝翔中国山东找蓝翔中国山东找蓝翔</view>
+            <view class="f24 c3987f0 l2">楼主：杀死象的小猎豹</view>
+        </view>
+    </view>
+</scroll-view>

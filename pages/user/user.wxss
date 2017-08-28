@@ -1,0 +1,36 @@
+/* pages/user/user.wxss */
+@import "/css/search.wxss";
+.person_box{
+    padding: 16rpx 27rpx;
+    background: #1d82d2;
+    background-size: cover;
+}
+.portrait{
+    width: 117rpx;
+    height: 117rpx;
+    border-radius: 5px;
+}
+.nick_name{
+    padding-left: 20px;
+    line-height: 117rpx;
+    font-size: 14px;
+    color: #fff;
+}
+.user_info{
+    border-top: 1px solid #ccc;
+}
+.user_ul .li{
+    padding: 29rpx 23rpx;
+    border-bottom: 1px solid #ccc;
+    line-height: 16px;
+    font-size: 12px;
+}
+.user_ul .icon{
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-right: 32rpx;
+}
+.body{
+    padding-top: 0;
+}

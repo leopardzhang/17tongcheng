@@ -1,0 +1,8 @@
+<view class="search-hd">
+    <view class="search-area">
+        <form bindsubmit="search">
+            <input class="search-txt" name="keyword" placeholder="请输入关键字" bindinput="setText" />
+            <button class="search-btn" bindtap="search">搜索</button>
+        </form>
+    </view>
+</view>

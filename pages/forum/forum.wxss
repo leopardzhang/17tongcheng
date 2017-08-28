@@ -1,0 +1,26 @@
+/* pages/forum/forum.wxss */
+@import "/css/search.wxss";
+.board{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+}
+.f28{
+    font-size: 28rpx;
+}
+.f24{
+    font-size: 24rpx;
+}
+.c000{
+    color: #000;
+}
+.c585858{
+    color: #585858;
+}
+.l2{
+    line-height: 2;
+}
+.c3987f0{
+    color: #3987f0;
+}

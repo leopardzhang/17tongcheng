@@ -1,0 +1,84 @@
+/* pages/note/balance.wxss */
+.money_icon{
+    width: 150rpx;
+    height: 150rpx;
+    display: block;
+    margin: 20px auto;
+}
+text{
+    text-align: center;
+}
+.f16{
+    font-size: 16px;
+}
+.f28{
+    font-size: 28px;
+}
+button{
+    font-size: 16px;
+}
+.border_box_tb{
+    font-size: 18px;
+    line-height: 2.4;
+    display: flex;
+}
+.border_box_tb::before{
+  content: '';
+  width: 8px;
+  height: 20px;
+  display: inline-block;
+  float: left;
+  background: #1d82d2;
+  margin: auto 20rpx;
+}
+.inf_thead{
+    display: flex;
+    background: #1d82d2;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.inf_tr{
+    display: flex;
+    background: #1d82d2;
+    margin-top: 5px;
+    line-height: 2;
+    color: #fff;
+}
+.w60{
+    width: 60%;
+}
+.w40{
+    width: 40%;
+}
+.f48{
+    font-size: 48px;
+}
+.cccc{
+    color: #ccc;
+}
+.c1d82d2{
+    color: #1d82d2;
+}
+.line-height48{
+    line-height: 48px;
+}
+.page-body-button{
+    margin-top: 50px;
+    width: 160px;
+    height: 40px;
+    background: #1d82d2;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 8px;
+}
+.yutitle{
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}

@@ -1,0 +1,51 @@
+<!--pages/board/board.wxml-->
+<!-- banner -->
+<import src="/view/banner.wxml" />
+<!-- search -->
+<import src="/view/search.wxml" />
+<template is="search" data="{{logoSrc: logoSrc}}" />
+<scroll-view class="main pt" scroll-into-view="{{bottom}}" scroll-with-animation="true">
+    <view class="">
+        <template is="banner" data="{{bannerUrlList: bannerUrlList,swiper: swiper}}"/>
+    </view>
+    <view class="">
+        <view class="border_list">
+            <view class="li content">
+                <view class="f28 c000">{{board.title}}</view>
+                <view class="c999 f12px">
+                    <text class="read_time">浏览：{{board.hits}}</text>
+                </view>
+                <view class="f24 c585858 em">
+                  <text>{{board.con}}</text>
+                </view>
+                <view class="f24 c3885ee">楼主：{{board.louzhu}}</view>
+            </view>
+            <block wx:for="{{repeatList}}" wx:for-item="repeat" wx:key="{{index}}">
+                <view class="li content ptb_10" data-cid="{{repeat.id}}" data-lz="{{repeat.pl_name}}" bindtap="repeat">
+                    <view class="content">
+                        <view class="f28 c000">{{repeat.pl_name}}</view>
+                        <view class="f24 c585858 em block">{{repeat.body}} </view>
+                        <view class="repeat_list">
+                            <block wx:for="{{repeat.huifu}}" wx:key="{{it}}">
+                                <view class="f24">
+                                    <text class="c3885ee">{{item.hf_name}}</text>
+                                    <text class="c000"> 回复：</text>
+                                    <text class="c666">{{item.body}}</text>
+                                </view>
+                            </block>
+                        </view>
+                        <view class="f24 c3885ee" wx:if="{{repeat.hfzt}}"> 回复>></view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view id="bottom"></view>
+</scroll-view>
+<view class="repeat_btn content">
+    <view class="repeat">
+        <input type="text" focus="{{focusVal}}" placeholder="{{repeatFor ? '回复内容' : '回个话鼓励下楼主'}}" value="{{inputValue}}" bindinput="getVal" />
+        <text class="send_btn s1" hidden="{{repeatFor}}" bindtap="send">发送</text>
+        <text class="send_btn s2" wx:if="{{repeatFor}}" bindtap="repeatSend">发送</text>
+    </view>
+</view>

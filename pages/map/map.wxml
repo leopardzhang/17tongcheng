@@ -1,0 +1,1 @@
+<map longitude="{{position.longitude}}" latitude="{{position.latitude}}" scale="17" markers="{{markers}}" />

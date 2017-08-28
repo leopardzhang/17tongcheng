@@ -1,0 +1,33 @@
+<!--pages/contact/contact.wxml-->
+<view class="fullpage">
+    <view class="body">
+        <image src="https://18508788.17tongcheng.cn/api/images/blog_03.png" class="blog" />
+        <view class="cfff tac">
+            <text>—— 联系我们 ——</text>
+        </view>
+        <view class="btn_box tac cfff">
+            <view class="btn">
+                <view class="btn_outer">
+                    <view class="btn_inner">
+                        <contact-button size="30" type="default-light"></contact-button>
+                    </view>
+                </view>
+                <text class="f28">在线客服</text>
+            </view>
+            <view class="btn">
+                <view class="btn_outer" bindtap="makePhoneCall">
+                    <view class="btn_inner">
+                        <image src="https://18508788.17tongcheng.cn/api/images/tels_05.png" class="btn_img" />
+                    </view>
+                </view>
+                
+                <text class="f28">一键电话</text>
+            </view>
+        </view>
+        <view class="contact_text cfff">
+            <text>
+                {{message}}
+            </text>
+        </view>
+    </view>
+</view>

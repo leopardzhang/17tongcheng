@@ -1,0 +1,13 @@
+<template name="loading">
+    <view class="f28 c999 tac l22" hidden="{{!loading}}">
+        <text>加载中...</text>
+    </view>
+    <view class="f28 c999 tac l22 bge6e6e6" wx:if="{{!still}}">
+        <view>
+           <text>我是有底线的</text>
+        </view>
+    </view>
+    <view class="f28 c999 tac l22" wx:if="{{!have}}">
+        <text>暂无数据！</text>
+    </view>
+</template>

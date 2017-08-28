@@ -1,0 +1,25 @@
+<!--pages/note/pay.wxml-->
+<view class="content main">
+    <block wx:for="{{table}}" wx:for-item="tab" wx:key="index">
+        <view  class="nav_items {{curNav == tab.cid ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-cid="{{tab.cid}}">
+            <text class="f36 block">{{tab.money}}元</text> \n
+            <text class="f24 block">{{tab.title}}</text>
+        </view>
+    </block>
+    <view class="clear"></view>
+    <view class="pt_20" wx:if="{{youhuiList}}">
+        <view class="table">
+            <view class="tr">
+                <text class="td_title">优惠券：</text>
+            </view>
+        </view>
+        <view class="nav_items {{chosed == 1? 'active' : ''}}" data-you="{{youhuiList.id}}" bindtap="choseCard">
+            <text class="f36 block">{{youhuiList.sum}}元</text> \n
+            <text class="f24 block">购买立减</text>
+        </view>
+    </view>
+    <view class="clear"></view>
+    <view class="pt_20">
+        <button class="page-body-button" type="primary" bindtap="requestPay">充值</button>
+    </view>
+</view>

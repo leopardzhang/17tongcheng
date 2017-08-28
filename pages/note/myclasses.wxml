@@ -1,0 +1,12 @@
+<!--pages/note/myclasses.wxml-->
+<view class="main">
+  <view class="pt_20">
+    <view class="border_box_tb c1d82d2 yutitle">
+        我的发布
+    </view>
+  </view>
+  <view class="news_list">
+      <import src="/view/news.wxml" />
+      <template is="news" data="{{newsList: newsList, deleteAble: deleteAble}}" />
+  </view>
+</view>

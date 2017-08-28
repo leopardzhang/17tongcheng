@@ -1,0 +1,148 @@
+<!--pages/classes/class.wxml-->
+<!-- banner -->
+<import src="/view/banner.wxml" />
+<!-- search -->
+<import src="/view/search.wxml" />
+<template is="search" data="{{logoSrc: logoSrc}}" />
+<scroll-view class="main pt">
+    <view class="content body inf_box">
+        <view class="pt_10"></view>
+        <view class="c000 f36 l2">{{information.title}}</view>
+        <view class="c999 f12px">
+            <text class="fb_date">{{timer}}</text><text class="read_time">浏览：{{information.hits}}</text>
+        </view>
+        <view class="pt_20">
+            <template is="banner"wx:if="{{information.picurl}}" data="{{bannerUrlList: information.picurl,swiper: swiper}}"/>
+        </view>
+    </view>
+    <view class="pt_20 inf_box" wx:if="{{information.content}}">
+        <view class="c000 f14px inf_name">
+            {{information.jops == 1 ? '具体要求' : '详细信息'}}：
+        </view>
+        <view class="c999 f12px">
+            <text>{{information.content}}</text>
+        </view>
+        <view class="c999 f12px">
+        <text>\n</text>
+            (联系我时请说明是在17同城上看到的)
+        </view>
+    </view>
+    <view class="pt_20 inf_box" wx:if="{{information.mold}}">
+        <view class="c000 f14px inf_name">
+            项目：
+        </view>
+        <view class="c999 f12px inf_text">
+            <text>{{information.mold}}</text>
+        </view>
+    </view>
+    <view class="pt_20 inf_box" wx:if="{{information.tels}}">
+        <view class="c000 f14px inf_name">
+            联系方式：
+        </view>
+        <view class="c999 f12px inf_text">
+            <text>{{information.tels}}</text>
+        </view>
+    </view>
+    <view class="pt_20 inf_box" wx:if="{{information.gongsi}}">
+        <view class="c000 f14px inf_name">
+            公司名称：
+        </view>
+        <view class="c999 f12px inf_text">
+            <text>{{information.gongsi}}</text>
+        </view>
+    </view>
+    <view class="pt_20 inf_box" wx:if="{{information.zhiweiname}}">
+        <view class="c000 f14px inf_name">
+            职位名称：
+        </view>
+        <view class="c999 f12px inf_text">
+            <text>{{information.zhiweiname}}</text>
+        </view>
+    </view>
+    <view class="pt_20 inf_box" wx:if="{{information.yuexin}}">
+        <view class="c000 f14px inf_name">
+            月薪：
+        </view>
+        <view class="c999 f12px inf_text">
+            <text>{{information.yuexin}}</text>
+        </view>
+    </view>
+    <view class="pt_20 inf_box" wx:if="{{information.quyus}}">
+        <view class="c000 f14px inf_name">
+            区域：
+        </view>
+        <view class="c999 f12px inf_text">
+            <text>{{information.quyus}}</text>
+        </view>
+    </view>
+    <view class="pt_20 inf_box" wx:if="{{information.dizhi}}">
+        <view class="c000 f14px inf_name">
+            地址：
+        </view>
+        <view class="c999 f12px inf_text">
+            <text>{{information.dizhi}}</text><navigator class="map_link" url="/pages/map/map?title={{information.dizhi}}&name={{information.dizhi}}">[点击查看地图位置]</navigator>
+        </view>
+    </view>
+    <view class="pt_20 inf_box" wx:if="{{information.huxing}}">
+        <view class="c000 f14px inf_name">
+            户型：
+        </view>
+        <view class="c999 f12px inf_text">
+            <text>{{information.huxing}}</text>
+        </view>
+    </view>
+    <view class="pt_20 inf_box" wx:if="{{information.jiage}}">
+        <view class="c000 f14px inf_name">
+            价格：
+        </view>
+        <view class="c999 f12px inf_text">
+            <text>{{information.jiage}}</text>
+        </view>
+    </view>
+    <view class="pt_20 inf_box" wx:if="{{information.job_num == 0 ? false : true}}">
+        <view class="c000 f14px inf_name">
+            招聘人数：
+        </view>
+        <view class="c999 f12px inf_text">
+            <text>{{information.job_num}}</text>
+        </view>
+    </view>
+    <view class="pt_20 inf_box" wx:if="{{information.louceng}}">
+        <view class="c000 f14px inf_name">
+            楼层：
+        </view>
+        <view class="c999 f12px inf_text">
+            <text>{{information.louceng}}</text>
+        </view>
+    </view>
+    <view class="pt_20 inf_box" wx:if="{{information.mianji}}">
+        <view class="c000 f14px inf_name">
+            面积：
+        </view>
+        <view class="c999 f12px inf_text">
+            <text>{{information.mianji}}</text>
+        </view>
+    </view>
+    <view class="pt_20 inf_box" wx:if="{{information.sex ? true : false}}">
+        <view class="c000 f14px inf_name">
+            性别：
+        </view>
+        <view class="c999 f12px inf_text">
+            <text>{{information.sex}}</text>
+        </view>
+    </view>
+    <view class="pt_20 inf_box" wx:if="{{information.piclist[0].picurl != ''}}">
+        <view class="c000 f14px inf_name">
+            照片展示：
+        </view>
+        <block wx:for="{{information.piclist}}" wx:for-item="image">
+            <view class="weui-uploader__file">
+                <image class="weui-uploader__img" src="{{image.picurl}}" data-src="{{image.picurl}}" bindtap="previewImage" />
+            </view>
+        </block>
+    </view>
+    <view class="tel_box" wx:if="{{information.yjtel!= ''}}">
+        <text>联系电话：{{information.yjtel}}</text>
+        <button class="fr" data-tel="{{information.yjtel}}" bindtap="makePhoneCall">一键拨号</button>
+    </view>
+</scroll-view>

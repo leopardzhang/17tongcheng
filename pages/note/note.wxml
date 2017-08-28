@@ -1,0 +1,28 @@
+<!--pages/note/note.wxml-->
+<view class="main">
+    <view class="pt_20">
+        <view class="border_box_tb c1d82d2 content yutitle">
+            交易记录
+        </view>
+        <view class="content tac">
+            <view class="pt_20">
+                <view class="inf_table">
+                    <view class="inf_thead">
+                        <view class="inf_th w60">交易时间</view>
+                        <view class="inf_th w40">交易金额(元)</view>
+                    </view>
+                </view>
+                <block wx:for="{{chongList}}" wx:key="index">
+                    <view class="inf_tr flex f12px c666">
+                            <view class="inf_td w60">
+                                {{item.zf_timer}}
+                            </view>
+                            <view class="inf_td w40">
+                                {{item.money}}
+                            </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view>
+</view>

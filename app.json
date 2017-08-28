@@ -1,0 +1,62 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/release/releaselist",
+    "pages/contact/contact",
+    "pages/board/board",
+    "pages/classes/classlist",
+    "pages/classes/class",
+    "pages/user/user",
+    "pages/search/search",
+    "pages/forum/forum",
+    "pages/board/boardlist",
+    "pages/note/balance",
+    "pages/note/myclasses",
+    "pages/note/pay",
+    "pages/board/post",
+    "pages/search/searched",
+    "pages/note/youhui",
+    "pages/map/map"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#1d82d2",
+    "navigationBarTitleText": "17同城",
+    "backgroundColor": "#fff",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color":"#000",
+    "selectedColor":"#1d82d2",
+    "backgroundColor":"#fff",
+    "borderStyle":"black",
+    "list": [
+        {
+        "pagePath":"pages/index/index",
+        "iconPath": "images/icon1.png",
+        "selectedIconPath": "images/icon1s.png",
+        "text": "首页"
+      },
+      {
+        "pagePath":"pages/board/boardlist",
+        "iconPath": "images/icon3.png",
+        "selectedIconPath": "images/icon3s.png",
+        "text": "留言板"
+      },
+      {
+        "pagePath":"pages/contact/contact",
+        "iconPath": "images/icon2.png",
+        "selectedIconPath": "images/icon2s.png",
+        "text": "联系我们"
+      },
+      {
+        "pagePath":"pages/user/user",
+        "iconPath": "images/icon4.png",
+        "selectedIconPath": "images/icon4s.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "debug": false
+}

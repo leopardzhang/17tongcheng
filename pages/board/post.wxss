@@ -1,0 +1,11 @@
+/* pages/board/post.wxss */
+.tr{
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+input{
+    font-size: 14px;
+}
+textarea{
+    font-size: 12px;
+}

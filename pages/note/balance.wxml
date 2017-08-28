@@ -1,0 +1,21 @@
+<!--pages/note/balance.wxml-->
+<view class="main content">
+    <view class="pt_20">
+        <view class="border_box_tb c1d82d2 content yutitle">
+            我的会员
+        </view>
+        <view class="content tac pt_20" wx:if="{{yue.lv==0? true: false}}">
+            <text class="cccc f12 line-height48">您还不是会员</text>
+        </view>
+        <view class="content pt_20" wx:if="{{yue.lv==0? false: true}}">
+            <text class="c1d82d2 blod line-height48">尊贵的{{yue.level}}会员</text>
+        </view>
+        <view class="content pt_20" wx:if="{{yue.lv==0? false: true}}">
+            <text class="cccc f12 line-height48">会员到期时间：</text>
+            <text class="c1d82d2 blod line-height48">{{yue.level_timer}}</text>
+        </view>
+        <view class="pt_20">
+            <!--<view class="page-body-button" bindtap="goToPay">去充值</view>-->
+        </view>
+    </view>
+</view>

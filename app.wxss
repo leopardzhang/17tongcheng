@@ -1,0 +1,134 @@
+.tac{text-align: center;}
+.clear::after{ content: ""; display: block; clear:both; overflow:hidden; height:0;}
+.fl{ float:left;}
+.fr{ float:right;}
+.abs{ position:absolute;}
+.rel{ position:relative;}
+.indent{text-indent: 2em;}
+.tac{text-align: center;}
+.blod{ font-weight: 700}
+.em{text-indent: 2em；}
+.block{ display: block;word-break:break-all;}
+
+page{
+    font-family: Microsoft YaHei;
+    position: relative;
+}
+swiper{
+    height: 384rpx;
+}
+.main{
+    min-height: 100vh;
+    background: #fff;
+    padding-bottom: 12rpx;
+    box-sizing: border-box;
+}
+.content{
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+}
+.flex{
+    display: flex;
+}
+navigator:hover{
+    background-color: none;
+}
+.banner image{
+    width: 750rpx;
+    height: 384rpx;
+}
+.pt_20{
+    padding-top: 20rpx;
+}
+.pt_12{
+    padding-top: 12rpx;
+}
+.pt_10{
+    padding-top: 10rpx;
+}
+.cfff{
+    color: #fff;
+}
+.c000{
+    color: #000;
+}
+.c666{
+    color: #666;
+}
+.c999{
+    color: #999;
+}
+.l22{
+    line-height: 2.2;
+}
+.f28{
+    font-size: 28rpx;
+}
+.f16{
+    font-size: 16px;
+}
+.f22{
+    font-size: 22rpx;
+}
+.f24{
+    font-size: 24rpx;
+}
+.f36{
+    font-size: 36rpx;
+}
+.w448{
+    width: 448rpx;
+}
+.text_overflow{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    width: 380rpx;
+}
+scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.f14px{
+    font-size: 14px;
+}
+.f12px{
+    font-size: 12px;
+}
+.f26{
+    font-size: 26rpx;
+}
+.cff2929{
+    color: #ff2929;
+}
+.c3885ee{
+    color: #3885ee;
+}
+.c585858{
+    color: #585858;
+}
+.f48{
+    font-size: 48rpx;
+}
+.navigator-hover{
+  background: transparent;
+  opacity: 0.6;
+}
+.bge6e6e6{
+  padding: 24rpx 15rpx;
+  color: #aaa;
+}
+.bge6e6e6 view{
+  background: url('https://67376893.qcloud.la/api/images/a32_02.jpg?id=1') repeat-x;
+  background-size: auto 100%;
+}
+.bge6e6e6 text{
+  padding: 0 10rpx;
+  background: #fff;
+}

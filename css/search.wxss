@@ -1,0 +1,46 @@
+.search-bar{
+    background: #1d82d2;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    flex-wrap:wrap;
+    flex-direction:row;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+.pt{
+    padding-top: calc(61rpx + 30px);
+}
+.logo{
+    width: 106rpx;
+    height: 61rpx;
+}
+.search-bar .input{
+    color: #aaa;
+    width: 550rpx;
+    padding: 0 13rpx;
+    height: 61rpx;
+    line-height: 61rpx;
+    border-radius: 6px;
+    font-size: 26rpx;
+    background-image: url('https://18508788.17tongcheng.cn/api/images/i_06.jpg');
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+    margin-left: 10rpx;
+}
+.fb_btn{
+    width: 127rpx;
+    height: 61rpx;
+    background-repeat: no-repeat;
+    background-image: url('https://18508788.17tongcheng.cn/api/images/i_05.jpg');
+    background-position: center center;
+    background-size: contain;
+    margin-left: 10rpx;
+}
+.body{
+    padding-top: 10rpx;
+}

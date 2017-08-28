@@ -1,0 +1,28 @@
+/* pages/note/youhui.wxss */
+.youhui_box{
+    padding: 20rpx;
+    color: #fff;
+}
+.card{
+    width: 220px;
+    height: 88px;
+    background: url(https://18508788.17tongcheng.cn/api/images/card_03.jpg) no-repeat;
+    background-size: 100%;
+    margin: 0 auto 20px;
+}
+.money{
+    font-size: 32px;
+    line-height: 54px;
+}
+.gettime{
+    font-size: 14px;
+    line-height: 32px;
+}
+.youhui_logo{
+  width: 100%;
+}
+.beizhu{
+  width: 220px;
+  margin: 0 auto;
+  line-height: 2.2;
+}

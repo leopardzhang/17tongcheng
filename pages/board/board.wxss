@@ -1,0 +1,58 @@
+/* pages/board/board.wxss */
+@import "/css/search.wxss";
+@import "boardlist.wxss";
+.ptb_10{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+page{
+    padding-bottom: 50px;
+}
+.repeat_btn{
+    width: calc(100% - 20rpx);
+    border-top: 1px solid #ccc;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    position: fixed;
+}
+.repeat{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    line-height: 22px;
+}
+.repeat input{
+    width: 560rpx;
+    height: 26px;
+    border: 1px solid #ccc;
+    border-radius: 6rpx;
+    padding: 0 20rpx;
+    font-size: 12px;
+}
+.send_btn{
+    width: 100rpx;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    font-size: 24rpx;
+    border: 1px solid #ccc;
+    border-radius: 6rpx;
+    background: #f6f6f6;
+}
+.fb_date{
+    background: url(https://18508788.17tongcheng.cn/api/images/icon_03.jpg) no-repeat left center;
+    padding: 0 48rpx;
+    background-size: auto 80%;
+}
+.read_time{
+    background: url(https://18508788.17tongcheng.cn/api/images/icon_06.jpg) no-repeat left center;
+    padding-left: 48rpx;
+    background-size: auto 80%;
+}
+.f12px{
+    font-size: 12px;
+}
+.l2{
+    line-height: 2;
+}

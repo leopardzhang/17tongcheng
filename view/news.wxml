@@ -1,0 +1,18 @@
+<template name="news">
+    <block wx:for="{{newsList}}" wx:key="index">
+        <view class="li clear">
+            <text wx:if="{{deleteAble}}" data-id="{{item.id}}" class="delete fr" bindtap="destory">[删除]</text>
+            <navigator url="/pages/classes/class?id={{item.id}}">
+                <image src="{{item.picurl}}" />
+                <view class="text_area w448">
+                    <text class="c000 f28 w448 text_overflow">{{item.title}}</text>
+                    <text class="c666 f24 w448 text_overflow">{{item.jianjie}}</text>
+                    <text class="c666 f24"><text class="level fl blod">V</text><text class="num level blod fl">{{item.lv}}</text>{{item.fabu}}</text>
+                </view>
+                <view class="w64">
+                    <image src="../../images/n_06.jpg" class="top" wx:if="{{item.zhiding==1?true:false}}" />
+                </view>
+            </navigator>
+        </view>
+    </block>
+</template>

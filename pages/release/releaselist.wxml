@@ -1,0 +1,256 @@
+<!--pages/release/releaselist.wxml-->
+<view class="switch-tab flex">
+        <block wx:for="{{tableList}}" wx:for-item="tab" wx:key="index">
+            <view  class="nav_items {{curNav == tab.id ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{tab.id}}">{{tab.name}}</view>
+        </block>
+</view>
+<view class="class_tab">
+    <!-- 招聘 -->
+    <view class="view1" hidden="{{curNav == 1 ? false : true}}">
+        <!--<text class="c9a9a9b">输入详细信息</text>-->
+        <form bindsubmit="formSubmit" bindreset="formReset">
+            <view class="table">
+                <input name="types" value="job" class="hidden" />
+                <view class="tr">
+                    <label><text class="td_title">标题</text><input type="text" name="title" class="td_text" /></label>
+                </view>
+                <view class="tr">
+                    <label><text class="td_title">招聘单位</text><input type="text" name="gongsi" class="td_text" /></label>
+                </view>
+                <view class="tr">
+                    <label><text class="td_title">职位名称</text><input type="text" name="zhiweiname" class="td_text" /></label>
+                </view>
+                <view class="tr">
+                    <label><text class="td_title">工作区域</text>
+                        <picker bindchange="bindAreaChange" name="quyu" value="{{quyuid[quyuindex]}}" range="{{quyu}}" class="td_text">
+                            <view class="weui-input">{{quyu[quyuindex]}}</view>
+                        </picker>
+                    </label>
+                </view>
+                <view class="tr">
+                    <label><text class="td_title">详细地点</text><input type="text" name="dizhi" class="td_text" /></label>
+                </view>
+                <view class="tr">
+                    <label><text class="td_title">联系人</text><input type="text" name="yjtel" class="td_text" /></label>
+                </view>
+                <view class="tr">
+                    <label><text class="td_title">联系电话</text><input type="number" maxlength="11" name="yjtel" class="td_text" /></label>
+                </view>
+                <view class="tr">
+                    <label><text class="td_title">招聘人数</text><input type="number" name="job_num" text="number" class="td_text" /></label>
+                </view>
+                <view class="tr">
+                    <label><text class="td_title">性别</text>
+                        <picker bindchange="changeSex" name="sex" value="{{sexindex}}" range="{{sex}}" class="td_text">
+                            <view class="weui-input">{{sex[sexindex]}}</view>
+                        </picker>
+                    </label>
+                </view>
+                <view class="tr">
+                    <label><text class="td_title">月薪待遇</text>
+                        <picker bindchange="bindPickerChange" name="yuexin" value="{{moneyindex}}" range="{{money}}" class="td_text">
+                            <view class="weui-input">{{money[moneyindex]}}</view>
+                        </picker>
+                    </label>
+                </view>
+                <view class="tr">
+                    <label>
+                        <text class="td_title">具体要求</text>
+                        <textarea name="content" class="td_text area" />
+                    </label>
+                </view>
+            </view>
+            <!-- choseimg -->
+                <view class="weui-cell bgfff">
+                    <view class="weui-cell__bd">
+                    <view class="weui-uploader">
+                        <view class="weui-uploader__hd">
+                        <view class="weui-uploader__title">点击可上传图片(如需上传多张 请一次性选择上传)</view>
+                        <view class="weui-uploader__info">{{imageList.length}}/{{count[countIndex]}}</view>
+                        </view>
+                        <view class="weui-uploader__bd">
+                        <view class="weui-uploader__files">
+                            <block wx:for="{{imageList}}" wx:for-item="image">
+                            <view class="weui-uploader__file">
+                                <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage" />
+                            </view>
+                            </block>
+                        </view>
+                        <view class="weui-uploader__input-box">
+                            <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                        </view>
+                        </view>
+                    </view>
+                    </view>
+                </view>
+                <!-- choseimg -->
+            <view class="tr">
+                <button type="primary" formType="submit">提交</button>
+            </view>
+        </form>
+    </view>
+    <!-- 房产 -->
+    <view class="view2" hidden="{{curNav == 2 ? false : true}}">
+        <form bindsubmit="formSubmit1" bindreset="formReset">
+            <input name="types" value="fang" class="hidden" />
+            <view class="table">
+                <view class="tr">
+                    <label><text class="td_title">项目</text>
+                        <picker bindchange="bindMoldChange" name="mold" value="{{molds[moldindex]}}" range="{{mold}}" class="td_text">
+                            <view class="weui-input">{{mold[moldindex]}}</view>
+                        </picker>
+                    </label>
+                </view>
+                <view class="tr">
+                    <label><text class="td_title">标题</text><input type="text" name="title" class="td_text" /></label>
+                </view>
+                <view class="tr">
+                    <label><text class="td_title">所在区域</text>
+                        <picker bindchange="bindAreaChange" name="quyu" value="{{quyuid[quyuindex]}}" range="{{quyu}}" class="td_text">
+                            <view class="weui-input">{{quyu[quyuindex]}}</view>
+                        </picker>
+                    </label>
+                </view>
+                <view class="tr">
+                    <label><text class="td_title">详细地址</text><input type="text" name="dizhi" class="td_text" /></label>
+                </view>
+                <view class="tr">
+                    <label><text class="td_title">联系人</text><input type="text" name="tels" class="td_text" /></label>
+                </view>
+                <view class="tr">
+                    <label><text class="td_title">联系电话</text><input type="number" name="yjtel" maxlength="11" class="td_text" /></label>
+                </view>
+                <view class="tr">
+                    <label><text class="td_title">楼盘名称</text><input type="text" name="xiaoqu" class="td_text" /></label>
+                </view>
+                <view class="tr">
+                    <label><text class="td_title">价格/租金</text><input type="text" name="jiage" class="td_text" /></label>
+                </view>
+                <view class="tr">
+                    <label><text class="td_title">使用面积</text><input type="text" name="mianji" class="td_text" /></label>
+                </view>
+                <view class="tr">
+                    <label><text class="td_title">户型</text><input type="text" name="huxing" class="td_text" /></label>
+                </view>
+                <view class="tr">
+                    <label><text class="td_title">楼层</text><input type="number" name="louceng" class="td_text" /></label>
+                </view>
+                <view class="tr">
+                    <label>
+                        <text class="td_title">详细信息</text>
+                        <textarea name="content" class="td_text area" />
+                    </label>
+                </view>
+                <!-- choseimg -->
+                <view class="weui-cell bgfff">
+                    <view class="weui-cell__bd">
+                    <view class="weui-uploader">
+                        <view class="weui-uploader__hd">
+                        <view class="weui-uploader__title">点击可上传图片(如需上传多张 请一次性选择上传)</view>
+                        <view class="weui-uploader__info">{{imageList.length}}/{{count[countIndex]}}</view>
+                        </view>
+                        <view class="weui-uploader__bd">
+                        <view class="weui-uploader__files">
+                            <block wx:for="{{imageList}}" wx:for-item="image">
+                            <view class="weui-uploader__file">
+                                <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage" />
+                            </view>
+                            </block>
+                        </view>
+                        <view class="weui-uploader__input-box">
+                            <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                        </view>
+                        </view>
+                    </view>
+                    </view>
+                </view>
+                <!-- choseimg -->
+                <view class="tr">
+                    <button type="primary" bindtap="upLoadImgs" formType="submit">提交</button>
+                </view>
+            </view>
+        </form>
+    </view>
+    <!-- 其他类 -->
+    <view class="view3" hidden="{{curNav == 3 ? false : true}}">
+        <form bindsubmit="formSubmit1" bindreset="formReset">
+            <input name="types" value="pro" class="hidden" />
+            <view class="tr">
+                <label><text class="td_title">选择分类</text>
+                    <picker bindchange="bindClassesChange" name="cid" value="{{lists[classesindex].id}}" range="{{first}}" class="td_text">
+                        <view class="weui-input">{{lists[classesindex].title}}</view>
+                    </picker>
+                </label>
+            </view>
+            <view class="tr">
+                <label><text class="td_title">二级分类</text>
+                    <picker bindchange="bindClassesChange2" name="cid" value="{{lists[classesindex].itemlist[classesindex2].id}}" range="{{second}}" class="td_text">
+                        <view class="weui-input">{{lists[classesindex].itemlist[classesindex2].title}}</view>
+                    </picker>
+                </label>
+            </view>
+            <view class="tr" hidden="{{lists[classesindex].itemlist[classesindex2].itemlists ? false : true}}">
+                <label><text class="td_title">选择项目</text>
+                    <picker bindchange="bindClassesChange3" name="xiangmucid" value="{{lists[classesindex].itemlist[classesindex2].itemlists[classesindex3].id}}" range="{{third}}" class="td_text">
+                        <view class="weui-input">{{lists[classesindex].itemlist[classesindex2].itemlists[classesindex3].title}}</view>
+                    </picker>
+                </label>
+            </view>
+            <view class="tr">
+                    <label><text class="td_title">标题</text><input type="text" name="title" class="td_text" /></label>
+            </view>
+            <view class="tr">
+                <label><text class="td_title">所在区域</text>
+                    <picker bindchange="bindAreaChange" name="quyu" value="{{quyuid[quyuindex]}}" range="{{quyu}}" class="td_text">
+                        <view class="weui-input">{{quyu[quyuindex]}}</view>
+                    </picker>
+                </label>
+            </view>
+            <view class="tr">
+                <label><text class="td_title">详细地址</text><input type="text" name="dizhi" class="td_text" /></label>
+            </view>
+            <view class="tr">
+                <label><text class="td_title">联系人</text><input type="text" name="tels" class="td_text" /></label>
+            </view>
+            <view class="tr">
+                <label><text class="td_title">联系电话</text><input type="number" name="yjtel" maxlength="11" class="td_text" /></label>
+            </view>
+            <view class="tr">
+                <label><text class="td_title">公司名称</text><input type="text" name="gongsi" maxlength="11" class="td_text" /></label>
+            </view>
+            <view class="tr">
+                <label>
+                    <text class="td_title">详细信息</text>
+                    <textarea name="content" class="td_text area" />
+                </label>
+            </view>
+            <!-- choseimg -->
+            <view class="weui-cell bgfff">
+                <view class="weui-cell__bd">
+                    <view class="weui-uploader">
+                        <view class="weui-uploader__hd">
+                        <view class="weui-uploader__title">点击可上传图片(如需上传多张 请一次性选择上传)</view>
+                        <view class="weui-uploader__info">{{imageList.length}}/{{count[countIndex]}}</view>
+                        </view>
+                        <view class="weui-uploader__bd">
+                        <view class="weui-uploader__files">
+                            <block wx:for="{{imageList}}" wx:for-item="image">
+                            <view class="weui-uploader__file">
+                                <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage" />
+                            </view>
+                            </block>
+                        </view>
+                        <view class="weui-uploader__input-box">
+                            <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                        </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <!-- choseimg -->
+            <view class="tr">
+                <button type="primary" bindtap="upLoadImgs" formType="submit">提交</button>
+            </view>
+        </form>
+    </view>
+</view>

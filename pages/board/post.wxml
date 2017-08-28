@@ -1,0 +1,12 @@
+<!--pages/board/post.wxml-->
+<view class="main">
+    <view class="tr">
+        <input value="{{titleValue}}" bindinput="setTitle" placeholder="#点击添加标题#" />
+    </view>
+    <view class="tr">
+        <textarea value="{{textValue}}" bindinput="setText" placeholder="#点击添加内容#" />
+    </view>
+    <view class="pt_20 content">
+        <button class="page-body-button" type="primary" bindtap="send">发表</button>
+    </view>
+</view>

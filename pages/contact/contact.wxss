@@ -1,0 +1,64 @@
+/* pages/contact/contact.wxss */
+.fullpage{
+    background: linear-gradient(#1d82d2, #3298ea);
+    min-height: 100vh;
+}
+.body{
+    padding-top: 80rpx;
+}
+.blog{
+    width: 354rpx;
+    height: 261rpx;
+    display: block;
+    margin: 0 auto;
+}
+.btn_box{
+    justify-content: space-around;
+    display: flex;
+    padding-top: 72rpx;
+}
+.btn_img{
+    width: 41rpx;
+    height: 39rpx;
+    display: block;
+    margin: auto;
+}
+.btn{
+    width: 138rpx;
+    font-size: 16px;
+    line-height: 2.4;
+}
+.contact_text{
+    width: 500rpx;
+    margin: 0 auto;
+    line-height: 2.4;
+    font-size: 14px;
+}
+.kefu{
+    background: url("https://18508788.17tongcheng.cn/api/images/tels_03.png") no-repeat center center;
+    background-color: transparent;
+    display: block;
+    border-radius: 50%;
+    width: 138rpx;
+    height: 138rpx;
+    color: #ec0000;
+}
+.btn_outer{
+    width: 138rpx;
+    height: 138rpx;
+    background: rgba(255, 255, 255, .3);
+    border-radius: 50%; 
+    display: flex;
+}
+.btn_inner{
+    width:  110rpx;
+    height: 110rpx;
+    background: rgba(255, 255, 255, .3);
+    border-radius: 50%; 
+    margin: auto;
+    display: flex;
+}
+.btn_inner contact-button{
+    margin: auto;
+    display: block;
+}

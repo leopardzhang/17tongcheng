@@ -1,0 +1,81 @@
+/* pages/forum/forum.wxss */
+@import "/css/search.wxss";
+.chose_box{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    justify-content:space-around;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.chose_box view{
+    line-height: 70rpx;
+    width: 6px;
+    font-size: 32rpx;
+}
+.chose_box .btn{
+    width: calc(50% - 3px);
+}
+.news_list{
+    min-height: calc(100vh - 480rpx - 50px);
+}
+.news_list .li{
+    border-bottom: 1px solid #ccc;
+    padding: 20rpx 10rpx 20rpx 18rpx;
+}
+.news_list .li navigator{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+}
+.news_list .li image{
+    width: 180rpx;
+    height: 118rpx;
+}
+.text_area{
+    padding-left: 20rpx;
+    line-height: 1.6;
+}
+.text_area text{
+    display: block;
+}
+.level{
+    color: #ff0000;
+}
+.num{
+    font-size: 20rpx;
+    padding-top: 4rpx;
+    padding-right: 10rpx;
+}
+.w64{
+    width: 64rpx;
+}
+.top{
+    width: 64rpx!important;
+    height: 25rpx!important;
+}
+.area{
+    width: 100%!important;
+    background: #fff;
+    left: 0;
+    top: 72rpx;
+    z-index: 20;
+}
+.area .li{
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 70rpx;
+    color: #000;
+    padding: 0 34rpx;
+    border-bottom: 1px solid #ccc;
+    font-size: 24rpx;
+}
+.mask{
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    left: 0;
+    top: 102rpx;
+    width: 100%!important;
+    height: 1000vh;
+    z-index: 10;
+}

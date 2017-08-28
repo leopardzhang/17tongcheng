@@ -1,0 +1,84 @@
+/* pages/release/releaselist.wxss */
+@import "/css/weui.wxss";
+.notice{
+    background: rgba(0, 0, 0, .2);
+    display: block;
+    line-height: 32rpx;
+    border-radius: 16rpx;
+    padding: 0 8px;
+}
+.switch-tab{
+    border-bottom: 1px solid #d1d1d1;
+}
+.nav_items{
+    width: 33.333%;
+    display: block;
+    color: #b7b7b7;
+    text-align: center;
+    font-size: 14px;
+    line-height: 40px;
+    box-sizing: border-box;
+}
+.nav_items.active{
+    border-bottom: 3px solid #1d82d2;
+    color: #545454;
+}
+.tr{
+    padding: 5px 20rpx 0;
+    clear: both;
+}
+.tr label{
+    display: flex;
+    border-bottom: 1px solid #efeff4;
+    padding-bottom: 5px;
+}
+page{
+    font-size: 14px;
+}
+.class_tab{
+    background: #efeff4;
+    border-bottom: 10px solid #fff;
+}
+.class_tab .tr{
+    background: #fff;
+    height: auto;
+    line-height: 36px;
+}
+.td_title{
+    width: 175rpx;
+    display: block;
+    border-right: 1px solid #d1d1d1;
+    margin-right: 10px;
+    text-align: center;
+}
+.td_text{
+    width: 535rpx;
+    line-height: 36px;
+    height: 36px;
+}
+.c9a9a9b{
+    color: #9a9a9b;
+    padding: 4px 20rpx;
+    line-height: 32px;
+    display: block;
+}
+.area{
+    min-height: 7em;
+    height: auto;
+    padding-top: 10px;
+}
+.table .tr:last-child{
+    height: auto;
+}
+.table .tr:last-child label{
+    border-bottom: none
+}
+button{
+    font-size: 16px;
+}
+.hidden{
+    display: none;
+}
+.bgfff{
+    background: #fff;
+}

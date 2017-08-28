@@ -1,0 +1,23 @@
+<!--pages/user/user.wxml-->
+<!-- search -->
+<import src="/view/search.wxml" />
+<template is="search" data="{{logoSrc: logoSrc}}" />
+<scroll-view class="main pt">
+    <view class="body">
+        <view class="person_box flex">
+            <image src="{{avatarUrl}}" class="portrait" />
+            <text class="nick_name">{{nickName}}</text>
+        </view>
+    </view>
+    <view class="user_info">
+        <view class="user_ul">
+            <block wx:for="{{infoList}}">
+                <navigator url="{{item.url}}?name={{item.name}}" class="li">
+                    <image src="{{item.imgUrl}}" class="icon" />
+                    <text>{{item.name}}</text>
+                    <text class="fr">></text>
+                </navigator>
+            </block>
+        </view>
+    </view>
+</scroll-view>

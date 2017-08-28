@@ -1,0 +1,57 @@
+<!--pages/index/index.wxml-->
+<!-- banner -->
+<import src="/view/banner.wxml" />
+<!-- search -->
+<import src="/view/search.wxml" />
+<template is="search" data="{{logoSrc: logoSrc}}" />
+<scroll-view class="main pt">
+    <view>
+        <template is="banner" data="{{bannerUrlList: bannerUrlList,swiper: swiper}}"/>
+        <view class="">
+        <view class="pt_10">
+            <view class="border_box nav_box padding-bottom">
+                <block wx:for="{{navList}}" wx:for-item="navItem" wx:key="index">
+                    <view class="nav_item">
+                        <navigator url="/pages/classes/classlist?id={{navItem.id}}&pageName={{navItem.title}}" open-type="navigate">
+                            <image src="{{navItem.picurl}}"></image>
+                            <text>{{navItem.title}}</text>
+                        </navigator>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view class="class_list">
+            <block wx:for="{{classList}}" wx:for-item="className" wx:key="index">
+                <view class="border_box flex">
+                    <view class="title_box">
+                        <image src="{{className.picurl}}" class="class_img" />
+                        <text>{{className.title}}</text>
+                    </view>
+                    <view class="class_item_box">
+                        <block wx:for="{{className.itemlist}}" wx:key="index">
+                            <view>
+                                <navigator url="{{item.linkurl}}&pageName={{item.title}}" open-type="navigate">{{item.title}}</navigator>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+            </block>
+            <!-- 本体 -->
+            <!--<view class="border_box flex">
+                <view class="title_box">
+                    <image src="../../images/i_16.jpg" class="class_img" />
+                    <text>便民服务</text>
+                </view>
+                <view class="class_item_box">
+                    <view>
+                        <navigator url="">搬家</navigator>
+                    </view>
+                    <view>
+                        <navigator url="">搬家</navigator>
+                    </view>
+                </view>
+            </view>-->
+        </view>
+        </view>
+    </view>
+</scroll-view>

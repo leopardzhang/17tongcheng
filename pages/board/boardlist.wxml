@@ -1,0 +1,35 @@
+<!--pages/board/boardlist.wxml-->
+<!-- banner -->
+<import src="/view/banner.wxml" />
+<!-- search -->
+<import src="/view/search.wxml" />
+<template is="search" data="{{logoSrc: logoSrc}}" />
+<scroll-view class="main pt">
+    <view class="">
+        <template is="banner" data="{{bannerUrlList: bannerUrlList,swiper: swiper}}"/>
+    </view>
+    <view class="">
+        <view class="border_list">
+            <block wx:for="{{boardList}}" wx:key="{{index}}">
+                <view class="li content">
+                    <navigator url="/pages/board/board?id={{item.id}}">
+                        <view class="w64 fr">
+                            <image src="../../images/n_06.jpg" class="top" wx:if="{{item.zhiding==1?true:false}}" />
+                        </view>
+                        <view class="f28 nowrap c000">{{item.title}}</view>
+                        <view class="f26 c666">{{item.jianjie}}</view>
+                        <view class="flex">
+                            <view class="item date c666 f24">{{item.time}}</view>
+                            <view class="item lz c3885ee f24">{{item.fabu}}</view>
+                        </view>
+                    </navigator>
+                </view>
+            </block>
+            <import src="/view/loading.wxml" />
+            <template is="loading" data="{{loading: loading, still: still, have: have}}" />
+        </view>
+    </view>
+</scroll-view>
+<view class="fb_box">
+    <button class="page-body-button" type="primary" bindtap="navToPost">我也说两句</button>
+</view>

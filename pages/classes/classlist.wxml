@@ -1,0 +1,37 @@
+<!--pages/index/index.wxml-->
+<!-- banner -->
+<import src="/view/banner.wxml" />
+<!-- search -->
+<import src="/view/search.wxml" />
+<template is="search" data="{{logoSrc: logoSrc}}" />
+<scroll-view class="main pt">
+    <view class="">
+        <template is="banner" data="{{bannerUrlList: bannerUrlList,swiper: swiper}}"/>
+    </view>
+    <view class="">
+        <view class="chose_box flex tac rel c000">
+            <view class="btn" bindtap="switchArea">点击选择区域</view><view> | </view><view class="btn" bindtap="switchItems">点击查看项目</view>
+            <view class="area abs" hidden="{{areaHidden}}">
+                <block wx:for="{{areaList}}" wx:key="index">
+                    <view class="li content clear" data-id="{{item.id}}" bindtap="setArea">
+                        <text class="fl">{{item.title}}</text><text class="fr">></text>
+                    </view>
+                </block>
+            </view>
+            <view class="area abs" hidden="{{itemsHidden}}">
+                <block wx:for="{{itemList}}" wx:key="index">
+                    <view class="li content clear" data-id="{{item.id}}" bindtap="setItem">
+                        <text class="fl">{{item.title}}</text><text class="fr">></text>
+                    </view>
+                </block>
+            </view>
+            <view class="mask" hidden="{{areaHidden && itemsHidden}}"  bindtap="switchShow"></view>
+        </view>
+    </view>
+    <view class="news_list">
+        <import src="/view/news.wxml" />
+        <template is="news" data="{{newsList: newsList}}" />
+        <import src="/view/loading.wxml" />
+        <template is="loading" data="{{loading: loading, still: still, have: have}}" />
+    </view>
+</scroll-view>

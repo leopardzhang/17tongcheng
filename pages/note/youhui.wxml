@@ -1,0 +1,15 @@
+<!--pages/note/youhui.wxml-->
+<view class="youhui_box">
+    <image src="https://67376893.qcloud.la/api/images/quan_01_03.jpg" class="youhui_logo"></image>
+    <block wx:for="{{youhuiList}}">
+        <view class="card tac">
+            <view class="money">￥{{item.sum}}</view>
+            <view class="gettime">{{item.timer}}</view>
+        </view>
+    </block>
+    <view class="c666 beizhu f24">
+      <view>1.用户初次使用本平台 系统自动赠予代金券一张。</view>
+      <view>2.代金券用于平台充值 系统自动抵扣。</view>
+      <view>3.代金券不可折现。</view>
+    </view>
+</view>

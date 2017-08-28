@@ -1,0 +1,9 @@
+<template name="banner">
+    <swiper class="banner" autoplay="{{swiper.autoplay}}" indicator-dots="{{swiper.indicatorDots}}">
+        <block wx:for="{{bannerUrlList}}" wx:key="index">
+            <swiper-item>
+                <navigator url="/pages/classes/class?id={{item.url}}"><image src="{{item.picurl}}" /></navigator>
+            </swiper-item>
+        </block>
+    </swiper>
+</template>

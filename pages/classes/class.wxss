@@ -1,0 +1,64 @@
+/* pages/classes/class.wxss */
+@import "/css/search.wxss";
+@import "../release/releaselist.wxss";
+.fb_date{
+    background: url(https://18508788.17tongcheng.cn/api/images/icon_03.jpg) no-repeat left center;
+    padding: 0 48rpx;
+    background-size: auto 80%;
+}
+.read_time{
+    background: url(https://18508788.17tongcheng.cn/api/images/icon_06.jpg) no-repeat left center;
+    padding-left: 48rpx;
+    background-size: auto 80%;
+}
+.f12px{
+    font-size: 12px;
+}
+.l2{
+    line-height: 2;
+}
+.inf_name{
+    width: 220rpx;
+}
+.inf_text{
+    width: 450rpx;
+}
+.inf_box{
+    padding-left: 40rpx;
+    padding-right: 40rpx;
+    padding-bottom: 20rpx;
+}
+.inf_box::after{
+    content: '';
+    display: block;
+    clear: both;
+    width: 670rpx;
+    height: 1px;
+    background: #eee;
+    transform: translateY(20rpx);
+}
+.tel_box{
+    position: fixed;
+    width: 100%;
+    line-height: 38px;
+    padding: 10px 30rpx;
+    left: 0;
+    bottom: 0;
+    background: #1d82d2;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #fff;
+}
+.tel_box button{
+    font-size: 15px;
+    line-height: 38px;
+    margin: 0;
+    padding: 0 14px;
+    color: #1d82d2;
+}
+.main{
+    padding-bottom: 48px;
+}
+.map_link{
+  color: #1d82d2;
+}
